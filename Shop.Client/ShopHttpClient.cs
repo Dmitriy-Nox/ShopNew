@@ -27,9 +27,11 @@ namespace Shop.Client
             var json = response.Content.ReadAsStringAsync().Result;
             return JsonConvert.DeserializeObject<MenuModel>(json);
         }
-        public void AddProduct()
+        public ShowCaseModel OpenShowCase()
         {
-
+            var response = _client.GetAsync("OpenShowCase").Result;
+            var json = response.Content.ReadAsStringAsync().Result;
+            return JsonConvert.DeserializeObject<ShowCaseModel>(json);
         }
         public void RemoveProduct()
         {

@@ -20,6 +20,7 @@ namespace Shop.Client
             while(true)
             {
                 Console.ReadLine();
+                PrintOrder();
             }
         }
 
@@ -29,6 +30,16 @@ namespace Shop.Client
             var menuItems = _httpClient.GetMenu().MenuModelItems;
             foreach(var itemMenu in menuItems)
                 Console.WriteLine($"{ itemMenu.Id}  {itemMenu.Text}");
+        }
+
+        internal void PrintOrder()
+        {
+            var order = _httpClient.OpenShowCase();
+
+            foreach (var position in order.ShowCaseItems)
+            {
+                Console.WriteLine($"{position.Name}: {position.Cathegory} * {position.Vol} = {position.Id}");
+            }
         }
     }
 }

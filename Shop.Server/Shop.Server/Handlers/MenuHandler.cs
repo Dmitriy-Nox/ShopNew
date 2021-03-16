@@ -10,7 +10,12 @@ namespace Shop.Server.Handlers
 {
     public class MenuHandler : Handler, IHandler
     {
-        public string Path { get; set; } = "/MainMenu";
+        public MenuHandler(String path)
+        {
+            Path = path;
+        }
+
+        public string Path { get; set; }
 
         public void Handler(HttpListenerContext context)
         {

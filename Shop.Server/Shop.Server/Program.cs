@@ -14,8 +14,7 @@ namespace Shop.Server
             var httpListener = new HttpListener();
             httpListener.Prefixes.Add(baseUrl.ToString());
 
-            var handlers = new List<IHandler>();
-            handlers.Add(new MenuHandler());
+            var handlers = new List<IHandler>() { new MenuHandler("/MainMenu"), new CommandHandler("/OpenShowCase"), new CommandHandler("/DeleteShowCase") };
 
             foreach (var handler in handlers)
             {
