@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "3mHrYuwe9MfVe1eFZzqfZugN5oOAl+pqrN//7Gu7Cm9ay/TYtMU01fGrVld5XM5/aGIPmZzRNkVszt7TTM/6gw==",
+  "success": true,
+  "projectFilePath": "D:\\Projects\\Repositories\\Shop\\Shop.Client\\Shop.Client.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\апр\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
